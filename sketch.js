@@ -7,26 +7,20 @@ function setup(){
 
   var canvas = createCanvas(300,100);
   canvas.parent('sketch');
-
   var deceasedDrummers = data.deceasedDrummers;
+var x = 20;
+var y = 20;
+  for(var i = 0; i < deceasedDrummers.length; i++){
+    var drummer = deceasedDrummers[i];
+    var died = drummer.died;
+    var joined = drummer.joined;
 
-  var died = [];
-  var name = [];
-  var joined = [];
 
-var x = 0;
-rectMode(CENTER);
-// display it
-var step = width/died.length;
-for(var i = 0; i < deceasedDrummers.length; i++){
-  text(name[i],x,(height/2) - 10);
-  ellipse(x,height/2 , died[i]-joined[i], died[i]-joined[i]);
+    ellipse(x, y, died -joined, died -joined);
+    x = x + width/deceasedDrummers.length;
+  }
 
-  x+=step;
 }
-}
-
-
 function draw(){
 
 }
