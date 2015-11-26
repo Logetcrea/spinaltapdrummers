@@ -8,14 +8,13 @@ function setup(){
 
   var canvas = createCanvas(1000,400);
   canvas.parent('sketch');
-  //fill(300,0,0,100);
-  //rect(0,0,width,height);
-
   var deceasedDrummers = data.deceasedDrummers;
+  var des = deceasedDrummers.description;
 
   var x = 20;
   var y = height/2;
-  line (0,y,width,y);
+  line (0, y, width, y);
+
   for(var i = 0; i < deceasedDrummers.length; i++){
 
     var drummer = deceasedDrummers[i];
@@ -25,6 +24,11 @@ function setup(){
     var name = drummer.name;
     var last = name.last;
     var first = name.first;
+
+    textSize(20);
+    rectMode(CENTER);
+    text(des, x, 0);
+
     stroke(255);
     strokeWeight(0.25);
     fill(255);
@@ -33,7 +37,7 @@ function setup(){
     ellipse(x + (1 + died - joined)* sizeFactor/2, y, (1 + died - joined)* sizeFactor, ( 1+ died - joined)* sizeFactor);
 
     textSize(10);
-    rectMode(CENTER);
+
     text(first + " " + last, (x + (1 + died - joined)* sizeFactor/2), y*1.8, 10,25);
 
     x = x + (1 + died - joined)* sizeFactor;
