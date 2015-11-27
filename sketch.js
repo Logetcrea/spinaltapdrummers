@@ -21,6 +21,9 @@ function setup(){
   var x = 20;
   var y = height/2;
 
+  var yPos;
+  var bool = true;
+
   text(des, x, 0, width,100);
   strokeWeight(1);
   line (0,y,width,y);
@@ -37,13 +40,23 @@ function setup(){
     var nick = name.nick;
 
 
+
     // + 1 because one year may also be from jan to dec
     // the ellipses sizes depend on the length the drummer participated to the band
     ellipse(x + (1 + died - joined)* sizeFactor/2, y, (1 + died - joined)* sizeFactor, ( 1+ died - joined)* sizeFactor);
 
-    textSize(10);
+    textSize(8);
     rectMode(CENTER);
-    text(first + " " + '"' + nick + '"' + " " + last, (x + (1 + died - joined)* sizeFactor/2),y * 1.8, 100,100);
+
+    if (bool){
+      yPos = 2;
+      bool = false;
+    }else{
+      yPos = 2.2;
+      bool = true;
+    };
+
+    text(first + " " + '"' + nick + '"' + " " + last, (x + (1 + died - joined)* sizeFactor/2), y * yPos, 50,200);
 
     x = x + (1 + died - joined)* sizeFactor;
 
