@@ -34,6 +34,8 @@ function setup(){
     var name = drummer.name;
     var last = name.last;
     var first = name.first;
+    var nick = name.nick;
+
 
     // + 1 because one year may also be from jan to dec
     // the ellipses sizes depend on the length the drummer participated to the band
@@ -41,7 +43,7 @@ function setup(){
 
     textSize(10);
     rectMode(CENTER);
-    text(first + " " + last, (x + (1 + died - joined)* sizeFactor/2), y*1.8, 10,25);
+    text(first + " " + '"' + nick + '"' + " " + last, (x + (1 + died - joined)* sizeFactor/2), y*1.8, 10,25);
 
     x = x + (1 + died - joined)* sizeFactor;
 
