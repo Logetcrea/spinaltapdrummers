@@ -43,7 +43,7 @@ function setup(){
 
     textSize(10);
     rectMode(CENTER);
-    text(first + " " + '"' + nick + '"' + " " + last, (x + (1 + died - joined)* sizeFactor/2), width/100, height/11);
+    text(first + " " + '"' + nick + '"' + " " + last, (x + (1 + died - joined)* sizeFactor/2),y * 1.8, 100,100);
 
     x = x + (1 + died - joined)* sizeFactor;
 
