@@ -27,6 +27,7 @@ function setup(){
   text(des, x, 0, width,100);
   strokeWeight(1);
   line (0,y,width,y);
+  text("1964",0,y+20,20);
   strokeWeight(0.25);
   for(var i = 0; i < deceasedDrummers.length; i++){
 
@@ -54,7 +55,15 @@ function setup(){
     }else{
       yPos = 2.2;
       bool = true;
+<<<<<<< HEAD
+<<<<<<< HEAD
     };
+=======
+    }
+>>>>>>> master
+=======
+    }
+>>>>>>> master
 
     text(first + " " + '"' + nick + '"' + " " + last, (x + (1 + died - joined)* sizeFactor/2), y * yPos, 50,200);
 
