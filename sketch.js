@@ -55,15 +55,9 @@ function setup(){
     }else{
       yPos = 2.2;
       bool = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    };
-=======
+
     }
->>>>>>> master
-=======
-    }
->>>>>>> master
+
 
     text(first + " " + '"' + nick + '"' + " " + last, (x + (1 + died - joined)* sizeFactor/2), y * yPos, 50,200);
 
