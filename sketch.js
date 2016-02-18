@@ -44,7 +44,6 @@ function setup(){
   text(des, x, 0, width,100);
   strokeWeight(1);
   line (0,y,width,y);
-  text("1964",0,y+20,20);
   strokeWeight(0.25);
 
 
