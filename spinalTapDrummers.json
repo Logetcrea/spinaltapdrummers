@@ -1,11 +1,7 @@
 {
 	"description": "Deceased drummers from the fictional rock band Spinal Tap, taken from Wikipedia.",
 	"deceasedDrummers": [{
-		"name": {
-			"first": "John",
-			"nick": "Stumpy",
-			"last": "Pepys"
-		},
+		"name": "peter",
 		"joined": 1964,
 		"died": 1966,
 		"demise": "Died in a bizarre gardening accident, that the authorities said was \"best left unsolved.\""
