@@ -31,6 +31,7 @@ function setup(){
   var yPos;
   var bool = true;
 
+
   var lastCounter = 0;
 
   line(0,y,x-1,y);
@@ -39,9 +40,25 @@ function setup(){
   noStroke();
 
   text(des, x, 0, width,100);
+
+  text(des, x, 0, width,100);
+  strokeWeight(1);
+  line (0,y,width,y);
+  text("1964",0,y+20,20);
+  strokeWeight(0.25);
+
+
+  line(0,y,x-1,y);
+
+  fill(255);
+  noStroke();
+
+  text(des, x, 0, width,100);
+
   textSize(8);
 
   text(starts,0,y);
+
 
   for(var i = 0; i < deceasedDrummers.length; i++){
 
@@ -53,9 +70,11 @@ function setup(){
     var first = name.first;
     var nick = name.nick;
 
+
     stroke(360,0,100,100);
     strokeWeight(1);
     noFill();
+
     // + 1 because one year may also be from jan to dec
     // the ellipses sizes depend on the length the drummer participated to the band
     ellipse(x + (1 + died - joined)* sizeFactor/2, y, (1 + died - joined)* sizeFactor, ( 1+ died - joined)* sizeFactor);
@@ -71,8 +90,10 @@ function setup(){
       bool = true;
 
     }
+
     fill(255);
     noStroke();
+
     text(first + " " + '"' + nick + '"' + " " + last, (x + (1 + died - joined)* sizeFactor/2), y * yPos, 50,200);
 
     x = x + (1 + died - joined)* sizeFactor;
